@@ -4,9 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:tdvp/components/catalogpage/catalogpage.dart';
 import 'package:tdvp/components/chatscreen/chatscreen.dart';
 import 'package:tdvp/components/contactpage/contactpage.dart';
 import 'package:tdvp/components/datacorporation/datacorporation.dart';
+import 'package:tdvp/components/evaluatepage/evaluatepage.dart';
+import 'package:tdvp/components/infopage/infoscreen.dart';
+import 'package:tdvp/components/printqueuepage/printqueue.dart';
+import 'package:tdvp/components/trackingpage/trackingpage.dart';
 import 'package:tdvp/utility/style.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:tdvp/components/calendarpage/calendarpage.dart';
@@ -99,26 +104,14 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<Widget> routToWidgdets = [
     DataCorporateScreen(),
-    HomeScreen(),
-    HomeScreen(),
-    CalendarPage(),
-    HomeScreen(),
-    HomeScreen(),
-    ContactScreen(),
-    HomeScreen(),
-    ChatbotScreen(),
-    //
-    /*
-    CorporateScreen(),
     CatalogPage(),
-    AssessmentPage(),
+    EvaluatePage(),
     CalendarPage(),
-    JobTrackPage(),
+    PrintQueuePage(),
+    TrackingPage(),
     ContactScreen(),
-    LogisticsPage(),
-    NewsScreen(),
-    ChatPage(),
-    */
+    InfotdvpScreen(),
+    ChatbotScreen(),
   ];
 
   @override
