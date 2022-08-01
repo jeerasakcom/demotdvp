@@ -3,14 +3,14 @@ import 'package:tdvp/utility/style.dart';
 
 class DataCorporateScreen extends StatefulWidget {
   @override
-  State createState() => new DataCorporateScreenState();
+  State createState() => DataCorporateScreenState();
 }
 
 class DataCorporateScreenState extends State<DataCorporateScreen>
     with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return  Scaffold(
       body: DefaultTabController(
         length: 3,
         child: NestedScrollView(
@@ -21,7 +21,7 @@ class DataCorporateScreenState extends State<DataCorporateScreen>
                 elevation: 0,
                 expandedHeight: 150,
                 leading: BackButton(
-                  color: Colors.white,
+                  color: Colors.black87,
                 ),
                 flexibleSpace: FlexibleSpaceBar(
                   //title: Text('title'),
@@ -43,11 +43,7 @@ class DataCorporateScreenState extends State<DataCorporateScreen>
                     indicatorColor: const Color(0xff04066b),
                     labelColor: const Color(0xff04066b),
                     unselectedLabelColor: const Color(0xff011298),
-                    labelStyle: TextStyle(
-                      fontFamily: 'THSarabunNew',
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    labelStyle: StyleProjects().TopicMain3U,
                     tabs: [
                       Tab(
                         text: 'คณะผู้บริหาร',

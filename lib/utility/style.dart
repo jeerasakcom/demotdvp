@@ -23,6 +23,12 @@ class StyleProjects {
       fontWeight: FontWeight.bold,
       fontSize: 20);
 
+  TextStyle TopicMain3U = TextStyle(
+      fontFamily: 'THSarabunNew',
+      color: const Color(0xff04066b),
+      fontWeight: FontWeight.bold,
+      fontSize: 18);
+
   TextStyle TopicMainT3 = TextStyle(
       fontFamily: 'Charmonman',
       color: const Color(0xff04066b),
@@ -156,7 +162,6 @@ class StyleProjects {
       ),
     );
   }
-  
 
   StyleProjects();
 
