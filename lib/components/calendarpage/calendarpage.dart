@@ -104,7 +104,6 @@ class _CalendarPageState extends State<CalendarPage>
       DateTime.parse("2021-12-10"): ['วันรัฐธรรมนูญ'],
       DateTime.parse("2021-12-31"): ['วันสิ้นปี'],
 
-
       //2565-2022
       DateTime.parse("2022-01-01"): ['วันขึ้นปีใหม่'],
       DateTime.parse("2022-01-03"): ['วันหยุดชดเชยวันขึ้นปีใหม่'],
@@ -132,9 +131,7 @@ class _CalendarPageState extends State<CalendarPage>
         'วันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว'
       ],
 
-      DateTime.parse("2022-07-29"): [
-        'วันหยุดราชการ กรณีพิเศษประจำปี 2565'
-      ],
+      DateTime.parse("2022-07-29"): ['วันหยุดราชการ กรณีพิเศษประจำปี 2565'],
 
       DateTime.parse("2022-08-12"): [
         'วันเฉลิมพระชนมพรรษาสมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถพระบรมราชชนนีพันปีหลวง'
@@ -145,9 +142,7 @@ class _CalendarPageState extends State<CalendarPage>
       DateTime.parse("2022-10-13"): [
         'วันคล้ายวันสวรรคตพระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร'
       ],
-      DateTime.parse("2022-10-14"): [
-        'วันหยุดราชการ กรณีพิเศษประจำปี 2565'
-      ],
+      DateTime.parse("2022-10-14"): ['วันหยุดราชการ กรณีพิเศษประจำปี 2565'],
       DateTime.parse("2022-10-23"): ['วันปิยมหาราช'],
       DateTime.parse("2022-10-23"): ['วันหยุดชดเชยวันปิยมหาราช'],
       DateTime.parse("2022-12-05"): [
@@ -156,11 +151,8 @@ class _CalendarPageState extends State<CalendarPage>
       DateTime.parse("2022-12-10"): ['วันรัฐธรรมนูญ'],
       DateTime.parse("2022-12-12"): ['วันหยุดชดเชยวันรัฐธรรมนูญ'],
 
-      DateTime.parse("2022-12-30"): [
-        'วันหยุดราชการ กรณีพิเศษประจำปี 2565'
-      ],
+      DateTime.parse("2022-12-30"): ['วันหยุดราชการ กรณีพิเศษประจำปี 2565'],
       DateTime.parse("2022-12-31"): ['วันสิ้นปี'],
-
     };
 
     _selectedEvents = _events![_selectedDay] ?? [];
@@ -203,20 +195,17 @@ class _CalendarPageState extends State<CalendarPage>
     return Scaffold(
       body: Container(
         constraints: BoxConstraints.expand(),
-        /*
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/bg652.jpg"),
             fit: BoxFit.cover,
           ),
         ),
-        */
-
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
             SizedBox(
-              height:30,
+              height: 30,
             ),
             _backButton(),
             SizedBox(
@@ -324,38 +313,35 @@ class _CalendarPageState extends State<CalendarPage>
     return ListView(
       children: _selectedEvents!
           .map((event) => Container(
-        decoration: BoxDecoration(
-          border: Border.all(width: 0.5),
-          borderRadius: BorderRadius.circular(8),
-          boxShadow: <BoxShadow>[
-            BoxShadow(
-              //color: const Color(0xffcce6f7),
-              color: const Color(0xffe5f2fb),
-              offset: Offset(1.0, 5.0),
-              blurRadius: 3,
-            ),
-          ],
-          //color: const Color(0xff81c2eb),
-          color: const Color(0xfff8fcff),
-        ),
-        margin: const EdgeInsets.all(15),
-        child: ListTile(
-          title: Text(
-            event.toString(),
-            textAlign: TextAlign.center,
-            style: StyleProjects().TopicMain2,
-            /*
-            style: TextStyle(
-              fontFamily: 'THSarabunNew',
-              fontSize: 24,
-              //color: const Color(0xff070ab5),
-              color: const Color(0xff04066b),
-            ),
-            */
-          ),
-          onTap: () => print('$event'),
-        ),
-      ))
+                decoration: BoxDecoration(
+                  border: Border.all(width: 0.5),
+                  borderRadius: BorderRadius.circular(8),
+                  boxShadow: <BoxShadow>[
+                    BoxShadow(
+                      //color: const Color(0xffcce6f7),
+                      color: const Color(0xffe5f2fb),
+                      offset: Offset(1.0, 5.0),
+                      blurRadius: 3,
+                    ),
+                  ],
+                  //color: const Color(0xff81c2eb),
+                  color: const Color(0xfff8fcff),
+                ),
+                margin: const EdgeInsets.all(15),
+                child: ListTile(
+                  title: Text(
+                    'วันหยุดราชการและวันหยุดพิเศษ',
+                    textAlign: TextAlign.center,
+                    style: StyleProjects().TopicMain2,
+                  ),
+                  subtitle: Text(
+                    event.toString(),
+                    textAlign: TextAlign.center,
+                    style: StyleProjects().TopicMain3,
+                  ),
+                  onTap: () => print('$event'),
+                ),
+              ))
           .toList(),
     );
   }
@@ -476,27 +462,21 @@ final Map<DateTime, List> _holidays = {
 
   DateTime(2022, 07, 14): ['วันเข้าพรรษา'],
   DateTime(2022, 07, 15): ['วันหยุดราชการกรณีพิเศษประจำปี 2565'],
-  DateTime(2022, 07, 28): [
-    'วันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว'
-  ],
+  DateTime(2022, 07, 28): ['วันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว'],
 
-  DateTime(2022, 07, 29) : [
-    'วันหยุดราชการ กรณีพิเศษประจำปี 2565'
-  ],
+  DateTime(2022, 07, 29): ['วันหยุดราชการ กรณีพิเศษประจำปี 2565'],
 
-  DateTime(2022, 08, 12) : [
+  DateTime(2022, 08, 12): [
     'วันเฉลิมพระชนมพรรษาสมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถพระบรมราชชนนีพันปีหลวง'
   ],
 
   DateTime(2022, 09, 28): [
     'วันสถาปนาโรงพิมพ์อาสารักษาดินแดน กรมการปกครอง กระทรวงมหาดไทย'
   ],
-  DateTime(2022, 10, 13):  [
+  DateTime(2022, 10, 13): [
     'วันคล้ายวันสวรรคตพระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร'
   ],
-  DateTime(2022, 10, 14): [
-    'วันหยุดราชการ กรณีพิเศษประจำปี 2565'
-  ],
+  DateTime(2022, 10, 14): ['วันหยุดราชการ กรณีพิเศษประจำปี 2565'],
   DateTime(2022, 10, 23): ['วันปิยมหาราช'],
   DateTime(2022, 10, 24): ['วันหยุดชดเชยวันปิยมหาราช'],
   DateTime(2022, 12, 05): [
@@ -507,5 +487,4 @@ final Map<DateTime, List> _holidays = {
   DateTime(2022, 12, 12): ['วันหยุดชดเชยวันรัฐธรรมนูญ'],
   DateTime(2022, 12, 30): ['วันหยุดราชการ กรณีพิเศษประจำปี 2565'],
   DateTime(2022, 12, 31): ['วันสิ้นปี'],
-
 };
