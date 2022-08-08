@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:tdvp/components/homescreen/homescreen.dart';
 import 'package:tdvp/utility/style.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
